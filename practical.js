@@ -48,7 +48,7 @@
 // Question 6
 // Display the multiplication table of a number entered by the user.
 
-// let num = number(prompt("Enter a number:"));
+// let num =Number(prompt("Enter a number:"));
 // let i = 1;
 
 // while (i <= 10) {
@@ -58,7 +58,19 @@
 // Question 7
 // Count how many digits are in a positive integer. Handle 0 as a one-digit number.
 
+// let num = Number(prompt("Enter a positive integer:"));
+// let count = 0;
 
+// if (num === 0) {
+//     count = 1;
+// } else {
+//     while (num > 0) {
+//         num = Math.floor(num / 10);
+//         count++;
+//     }
+// }
+
+// console.log("Number of digits =", count);
 // Question 8
 // // Calculate the factorial of a positive integer.
 // let num = Number(prompt("Enter a number:"));
@@ -73,10 +85,28 @@
 // console.log("Factorial =", fact);
 // Question 9
 // Reverse the digits of a positive integer. Example: 1234 becomes 4321.
+// let num = Number(prompt("Enter a positive integer:"));
+// let reverse = 0;
+
+// while (num > 0) {
+//     let digit = num % 10;
+//     reverse = reverse * 10 + digit;
+//     num = Math.floor(num / 10);
+// }
+
+// console.log("Reversed number =", reverse);
 // Question 10
 // Keep asking the user to enter a number until they enter 0, then display the sum of the non-zero numbers.
 
+// let num = Number(prompt("Enter a number:"));
+// let sum = 0;
 
+// while (num !== 0) {
+//     sum = sum + num;
+//     num = Number(prompt("Enter a number:"));
+// }
+
+// console.log("Sum =", sum);
 
 // Lab Practicals — for Loop
 // Question 1
@@ -132,15 +162,44 @@
 //     }
 // }
 
-// console.log("Count =", count);
-// Question 8
-// Print this pattern using a nested for loop: one star on the first line, two on the second, and three on the third.
-// Question 9
-// Print a 5 by 5 square of stars using nested for loops.
-// Question 10
-// Given an array of numbers, use a for loop with an index to find the largest value without using Math.max().
+// // console.log("Count =", count);
+// // Question 8
+// // Print this pattern using a nested for loop: one star on the first line, two on the second, and three on the third.
 
+// for (let i = 1; i <= 3; i++) {
+//     let pattern = "";
 
+//     for (let j = 1; j <= i; j++) {
+//         pattern = pattern + "*";
+//     }
+
+//     console.log(pattern);
+// }
+// // Question 9
+// // Print a 5 by 5 square of stars using nested for loops.
+
+// for (let i = 1; i <= 5; i++) {
+//     let pattern = "";
+
+//     for (let j = 1; j <= 5; j++) {
+//         pattern = pattern + "* ";
+//     }
+
+//     console.log(pattern);
+// }
+// // Question 10
+// // Given an array of numbers, use a for loop with an index to find the largest value without using Math.max().
+
+// let arr = [10, 25, 8, 45, 15];
+// let largest = arr[0];
+
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > largest) {
+//         largest = arr[i];
+//     }
+// }
+
+// console.log("Largest value =", largest);
 // Lab Practicals — for...of Loop
 // Question 1
 // Create an array of five fruit names and print each fruit using for...of.loop
@@ -172,44 +231,83 @@
 //     }
 // }
 
-// console.log("Even numbers =", count);
-// // Question 4
-// // Given an array of marks, count how many marks are 50 or above.
-// let marks = [45, 60, 75, 30, 50, 90];
-// let count = 0;
+// // console.log("Even numbers =", count);
+// // // Question 4
+// // // Given an array of marks, count how many marks are 50 or above.
+// // let marks = [45, 60, 75, 30, 50, 90];
+// // let count = 0;
 
-// for (let mark of marks) {
-//     if (mark >= 50) {
-//         count++;
-//     }
+// // for (let mark of marks) {
+// //     if (mark >= 50) {
+// //         count++;
+// //     }
+// // }
+
+// // console.log("Passed students =", count);
+// // Question 5
+// // Find the largest number in an array using for...of without Math.max().
+// // let numbers = [25, 80, 45, 100, 60];
+// // let largest = numbers[0];
+
+// // for (let num of numbers) {
+// //     if (num > largest) {
+// //         largest = num;
+// //     }
+// // }
+
+// // console.log("Largest number =", largest);
+// // Question 6
+// // Create an array of names and print each name in uppercase.
+// // let names=["sanika","nidha","nivin","ziyu","sayana"];
+// // for (let name of names){
+// //     console.log(name.toUpperCase());
+// // }
+
+// // Question 7
+// // Use for...of to print each character in a word on a separate line.
+// // let word = "HELLO";
+
+// // for (let char of word) {
+// //     console.log(char);
+// // }
+// // Question 8
+// // Accept a word and count the vowels using for...of.
+// // let word = prompt("Enter a word:");
+// // let count = 0;
+
+// // for (let char of word.toLowerCase()) {
+// //     if ("aeiou".includes(char)) {
+// //         count++;
+// //     }
+// // }
+
+// // console.log("Number of vowels =", count);
+// // Question 9
+// // Given an array of prices, calculate the total and average price.
+// let prices = [100, 200, 300, 400, 500];
+// let total = 0;
+
+// for (let price of prices) {
+//     total = total + price;
 // }
 
-// console.log("Passed students =", count);
-// Question 5
-// Find the largest number in an array using for...of without Math.max().
-// let numbers = [25, 80, 45, 100, 60];
-// let largest = numbers[0];
+// let average = total / prices.length;
+
+// console.log("Total price =", total);
+// console.log("Average price =", average);
+// // Question 10
+// // Given an array of numbers, create a new array containing only positive numbers using for...of and push().
+
+// let numbers = [-5, 10, -2, 20, 0, 15];
+// let positiveNumbers = [];
 
 // for (let num of numbers) {
-//     if (num > largest) {
-//         largest = num;
+//     if (num > 0) {
+//         positiveNumbers.push(num);
 //     }
 // }
 
-// console.log("Largest number =", largest);
-// Question 6
-// Create an array of names and print each name in uppercase.
-
-// Question 7
-// Use for...of to print each character in a word on a separate line.
-// Question 8
-// Accept a word and count the vowels using for...of.
-// Question 9
-// Given an array of prices, calculate the total and average price.
-// Question 10
-// Given an array of numbers,
-
-
+// console.log("Positive numbers =", positiveNumbers);
 
 // Lab Practicals — for...in Loop
 // Question 1
@@ -276,20 +374,101 @@
 // let product = {
 //     name: "Laptop",
 //     price: 35000,
-//     stock: 10
+// //     stock: 10
+// // };
+
+// // for (let key in product) {
+// //     console.log(key + " : " + product[key]);
+// // }
+// // Question 6
+// // Create a student marks object and display Pass or Fail for each student (pass mark: 50).
+let students = {
+    Anu: 75,
+    Rahul: 40,
+    Meera: 60,
+    Amal: 35
+};
+
+for (let name in students) {
+    if (students[name] >= 50) {
+        console.log(name + " : Pass");
+    } else {
+        console.log(name + " : Fail");
+    }
+}
+// // Question 7
+// // Count the number of properties in an object using for...in.
+let student = {
+    name: "Anu",
+    age: 20,
+    course: "JavaScript",
+    mark: 85
+};
+
+let count = 0;
+
+for (let key in student) {
+    count++;
+}
+
+console.log("Number of properties =", count);
+// // Question 8
+// // Create a car object with brand, model, year, and color. Display a formatted report.
+// let car = {
+//     brand: "Toyota",
+//     model: "Innova",
+//     year: 2024,
+//     color: "White"
 // };
 
-// for (let key in product) {
-//     console.log(key + " : " + product[key]);
+// console.log("........Car Report......... ");
+
+// for (let key in car) {
+//     console.log(key + " : " + car[key]);
 // }
-// Question 6
-// Create a student marks object and display Pass or Fail for each student (pass mark: 50).
-// Question 7
-// Count the number of properties in an object using for...in.
-// Question 8
-// Create a car object with brand, model, year, and color. Display a formatted report.
 // Question 9
 // Create an object containing three item names and their prices. Find the most expensive item using for...in.
-// Question 10
-// Create a weekly temperature object with days as keys and temperatures as values. Display each day and temperature, and
-// calculate the average temperature.
+// let items = {
+//     Pen: 10,
+//     Book: 150,
+//     Bag: 800
+// };
+
+// let expensiveItem = "";
+// let highestPrice = 0;
+
+// for (let item in items) {
+//     if (items[item] > highestPrice) {
+//         highestPrice = items[item];
+//         expensiveItem = item;
+// //     }
+// }
+
+// console.log("Most expensive item =", expensiveItem);
+// console.log("Price =", highestPrice);
+// // Question 10
+// // Create a weekly temperature object with days as keys and temperatures as values. Display each day and temperature, and
+// // calculate the average temperature.
+// let temperatures = {
+//     Monday: 30,
+//     Tuesday: 32,
+//     Wednesday: 31,
+//     Thursday: 29,
+//     Friday: 33,
+//     Saturday: 28,
+//     Sunday: 30
+// };
+
+// let total = 0;
+// let count = 0;
+
+// for (let day in temperatures) {
+//     console.log(day + " : " + temperatures[day] + "°C");
+
+//     total = total + temperatures[day];
+//     count++;
+// }
+
+// let average = total / count;
+
+// console.log("Average temperature =", average.toFixed(2) + "°C");
