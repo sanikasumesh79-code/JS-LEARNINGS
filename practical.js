@@ -382,36 +382,36 @@
 // // }
 // // Question 6
 // // Create a student marks object and display Pass or Fail for each student (pass mark: 50).
-let students = {
-    Anu: 75,
-    Rahul: 40,
-    Meera: 60,
-    Amal: 35
-};
+// let students = {
+//     Anu: 75,
+//     Rahul: 40,
+//     Meera: 60,
+//     Amal: 35
+// };
 
-for (let name in students) {
-    if (students[name] >= 50) {
-        console.log(name + " : Pass");
-    } else {
-        console.log(name + " : Fail");
-    }
-}
-// // Question 7
-// // Count the number of properties in an object using for...in.
-let student = {
-    name: "Anu",
-    age: 20,
-    course: "JavaScript",
-    mark: 85
-};
+// for (let name in students) {
+//     if (students[name] >= 50) {
+//         console.log(name + " : Pass");
+//     } else {
+//         console.log(name + " : Fail");
+//     }
+// }
+// // // Question 7
+// // // Count the number of properties in an object using for...in.
+// let student = {
+//     name: "Anu",
+//     age: 20,
+//     course: "JavaScript",
+//     mark: 85
+// };
 
-let count = 0;
+// let count = 0;
 
-for (let key in student) {
-    count++;
-}
+// for (let key in student) {
+//     count++;
+// }
 
-console.log("Number of properties =", count);
+// console.log("Number of properties =", count);
 // // Question 8
 // // Create a car object with brand, model, year, and color. Display a formatted report.
 // let car = {
