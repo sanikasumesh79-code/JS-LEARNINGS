@@ -49,7 +49,7 @@
 // console.log(input)
 
 // let result=confirm("are you sure you want to delete this file");
-// console.lof(result)
+// console.log(result)
 
 
 
@@ -559,3 +559,69 @@
 // console.log(students)
 // delete students['age']
 // console.log(students)
+
+
+// let details={
+//     name:"sree",
+//     greet(){
+//         console.log("hi,"+ this.name)///selfine corresponding aayittan self use cheyyunathan
+//     }
+// }
+// details.greet()
+
+
+// let d={
+//     name:"sanika",
+//     age:23,
+//     place:"calicut"
+// }   
+// console.log(Object.keys(d));//KEYS
+// console.log(Object.values(d));//VALUES
+// console.log(Object.entries(d));//KEY VALUE PAIR
+// console.log('place' in d)
+// console.log('age'in d)
+
+// let r=Math.round(5.2)
+// console.log(r)
+
+// let random=Math.random()///0&1 idayil ullathanm return cheyyua
+// console.log(random)
+
+//////////MATH METHODS//////
+// console.log(Math.floor(4.9));
+// console.log(Math.ceil(4.1));
+// console.log(Math.max(3,9,5));
+// console.log(Math.min(3,9,5));
+// console.log(Math.sqrt(49));
+// console.log(Math.pow(2,3));
+// console.log(Math.abs(-7));
+
+
+/////DATE OBJECT/////
+
+// let now=new Date()
+// console.log(now.getDate())
+// console.log(now.getDay())
+// console.log(now.getFullYear())
+// console.log(now.toLocaleDateString())
+
+//DOM IS [DOCUMENT OBJECT MODEL]
+//DOM IS AN KEY OF Object//
+//THE DOM IS A TREE OF AN OBJECTS THAT REPRESENTS THE WEBPAGE
+//BROWSER TURNS HTML INTO A TREE
+
+ ///TYPESCRIPT//////
+// function add(a,b){
+//     return a+b
+// }
+// console.log(add(20,15));
+// console.log(add('quest','calicut'))
+// console.log(add('25',50))
+// console.log(add('25',true))
+// console.log(add(true,'25'))
+// console.log(add('25',false))
+
+//TYPESCRIPT IS THE SUPERSET OF JAVASRIPT///
+//IT WAS DEVELOPED BY MICROSOFT
+
+
